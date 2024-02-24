@@ -1,0 +1,50 @@
+<!-- CHINNU BIRTHDAY DRAFT/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Happy Birthday Dhruva</title>
+</head>
+<body>
+
+    <header>
+        <h1>Happy Birthday, Dhruva!</h1>
+    </header>
+
+    <section id="birthday-person">
+        <img src="https://res.cloudinary.com/dyyjjm8af/image/upload/v1708696807/IMG_20231023_171655_ke71ql.jpg" alt="Birthday Person" class="responsive-image">
+    </section>
+
+    <section id="wish-form" class="beautiful-form">
+        <h2>Send Your Beautiful Wishes</h2>
+        <form id="birthday-form" action="http://localhost:3001/submitWish" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="message">Your Heartfelt Birthday Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label for="image">Attach a Lovely Image URL (optional):</label>
+            <input type="text" id="image" name="image">
+
+            <button type="button" onclick="submitWish()">Send Lovely Wish</button>
+        </form>
+    </section>
+
+    <section id="special-wishes" class="wishes-section">
+        <h2>Special Wishes</h2>
+        <ul id="special-wishes-list">
+            <!-- Special wishes will be dynamically added here -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Birthday Celebration of Chinnu</p>
+    </footer>
+
+    <script src="http://localhost:3001/script.js"></script>
+</body>
+</html>
